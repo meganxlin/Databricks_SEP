@@ -29,11 +29,6 @@ dbutils.fs.rm(bronzePath, recurse=True)
 
 # COMMAND ----------
 
-#Ingest raw data
-rawDF = ingest_batch_raw(rawData).cache()
-
-# COMMAND ----------
-
 from pyspark.sql.types import StringType
 from pyspark.sql.functions import *
 
