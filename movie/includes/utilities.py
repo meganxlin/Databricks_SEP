@@ -82,4 +82,12 @@ def untilStreamIsReady(namedStream: str, progressions: int = 3) -> bool:
         queries = list(filter(lambda query: query.name == namedStream, spark.streams.active))
     print("The stream {} is active and ready.".format(namedStream))
     return True
+  
+  
+  def ingest_batch_raw(Path: str) -> DataFrame:
+    return spark.read.format("json").option("multiline", "true").option("inferSchema", "true").load(Path)
+
+
+# COMMAND ----------
+
 

@@ -1,9 +1,8 @@
 # Databricks notebook source
 username = 'meganxlin'
 
-myPath = f"/dbacademy/{username}/dataengineering/classic/"
+myPath = f"/dbfs/FileStore/tables/movie/"
 
-landingPath = myPath + "landing/"
 rawPath = myPath + "raw/"
 bronzePath = myPath + "bronze/"
 silverPath = myPath + "silver/"
@@ -18,3 +17,7 @@ spark.sql(f"USE moviebricks_{username}")
 # COMMAND ----------
 
 # MAGIC %run ./utilities
+
+# COMMAND ----------
+
+
