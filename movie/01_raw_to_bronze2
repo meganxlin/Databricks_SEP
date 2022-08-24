@@ -9,15 +9,8 @@
 
 import json
 
-movies = {"movie": []}
-for i in range(8):
-    with open(myPath + f"movie_{i}.json") as f:
-        data = json.load(f)
-        movies["movie"].append(data["movie"])
 
-dbutils.fs.put(rawPath, json.dumps(movies, indent=2), True)
-
-movieshop = [dbutils.fs.ls(f"FileStore/tables/movie_0.json"), dbutils.fs.ls(f"FileStore/tables/movie_1.json"), dbutils.fs.ls(f"FileStore/tables/movie_2.json"), dbutils.fs.ls(f"FileStore/tables/movie_3.json"), dbutils.fs.ls(f"FileStore/tables/movie_4.json"), dbutils.fs.ls(f"FileStore/tables/movie_5.json"), dbutils.fs.ls(f"FileStore/tables/movie_6.json"), dbutils.fs.ls(f"FileStore/tables/movie_7.json")]
+movies = [dbutils.fs.ls(f"FileStore/tables/movie_0.json"), dbutils.fs.ls(f"FileStore/tables/movie_1.json"), dbutils.fs.ls(f"FileStore/tables/movie_2.json"), dbutils.fs.ls(f"FileStore/tables/movie_3.json"), dbutils.fs.ls(f"FileStore/tables/movie_4.json"), dbutils.fs.ls(f"FileStore/tables/movie_5.json"), dbutils.fs.ls(f"FileStore/tables/movie_6.json"), dbutils.fs.ls(f"FileStore/tables/movie_7.json")]
 
 
 
