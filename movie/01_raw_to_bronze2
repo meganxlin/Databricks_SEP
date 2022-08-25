@@ -19,10 +19,6 @@ movies = [dbutils.fs.ls(f"FileStore/tables/movie_0.json"), dbutils.fs.ls(f"FileS
 #Display the files in the raw path
 display(dbutils.fs.ls(f"FileStore/tables/movie_0.json"))
 
-# COMMAND ----------
-
-#Make Notebook Idempotent
-dbutils.fs.rm(bronzePath, recurse=True)
 
 # COMMAND ----------
 
